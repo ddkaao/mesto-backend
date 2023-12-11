@@ -3,9 +3,9 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 
 const app = express();
-const { PORT, MONGO_URL } = process.env;
+const { PORT, URI } = process.env;
 
-mongoose.connect(MONGO_URL);
+mongoose.connect(URI);
 
 app.use(express.json());
 
